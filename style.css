@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: Lato;
+    background-image: url(/images/fd.avif);
+    background-size: cover; /* Pour que l'image de fond couvre tout l'arrière-plan */
+    background-position: center; /* Pour centrer l'image de fond */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image de fond */
+}
+
+header {
+    background: #82490f;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-right: 25px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #816424;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+/*PROJET */
+#projects {
+    margin: 20px 0;
+    overflow-x: auto; /* Pour permettre le défilement horizontal si nécessaire */
+    white-space: nowrap; /* Empêche le retour à la ligne des éléments enfants */
+}
+
+.project {
+    background: #e4e4e4;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block; /* Pour que les projets restent sur une seule ligne */
+    width: 30%; /* Ajustez la largeur de chaque projet selon vos besoins */
+    max-width: calc(33.33% - 20px); /* Ajustez la largeur maximale en fonction de la marge */
+    min-width: 200px; /* Largeur minimale pour éviter que les projets ne deviennent trop petits */
+    white-space: normal; /* Permet le retour à la ligne dans les éléments enfants si nécessaire */
+}
+
+.project h3 {
+    margin-top: 0;
+    text-align: center; /* Centrer le titre */
+}
+
+/*FOOTER */
+footer {
+    background: #82490f;    
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/*ABOUT */
+#about {
+    padding: 20px;
+    
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.about-text {
+    flex: 1;
+    padding-right: 20px; /* Adjust the spacing between text and image */
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text li {
+    margin-bottom: 5px;
+}
+
+.profile-pic {
+    max-width: 200px; /* Adjust the size of the profile picture */
+    border-radius: 10%;
+    margin-left: 20px; /* Adjust the spacing between image and text */
+}
+
+
+/*carousel */
+.project {
+    background: #fee1cd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+
+
+.carousel {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+

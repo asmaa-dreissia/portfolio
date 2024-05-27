@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bienvenue sur Mon Portfolio</h1>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="cv.pdf" download="Dreissia_Asmaa_CV.pdf">Télécharger mon CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <hr>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Bonjour ! Je m'appelle Dreissia Asmaa et je suis une développeuse web passionnée avec 6 mois d'expérience.<br> J'ai eu l'occasion de travailler sur divers projets allant des petits sites vitrines aux applications web.</p>
+                <p>Mon expertise comprend les technologies suivantes :</p>
+                <ul>
+                    <img src="/images/compé-removebg-preview.png" alt="">
+                </ul>
+            </div>
+            <img src="/asmaa-removebg-preview (1).png" alt="Photo de Dreissia Asmaa" class="profile-pic">
+        </div>
+    </section>
+    
+    
+
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <hr>
+        <div class="project">
+            <h3>CineTech</h3>
+            <p> Réalisation d'une bibliothèque de films et de séries grâce à une API publique disponible en ligne.</p>
+            <div class="carousel">
+                <button class="carousel-button prev">◀</button>
+                <div class="carousel-images">
+                    <img src="/images/cine.png" alt="CineTech Image 1">
+                    <img src="/images/cine2.png" alt="CineTech Image 2">
+                    <img src="/images/cine3.png" alt="CineTech Image 3">
+
+                </div>
+                <button class="carousel-button next">▶</button>
+            </div>
+        </div>
+        
+        <div class="project">
+            <h3>HappyMeal</h3>
+            <p>Un site de repas en ligne qui permet d'afficher un ensemble de recettes et créer
+                des listes de course.</p>
+            <div class="carousel">
+                <button class="carousel-button prev">◀</button>
+                <div class="carousel-images">
+                    <img src="/images/hp.png" alt="HappyMeal Image 1">
+                    <img src="/images/hp3.png" alt="HappyMeal Image 2">
+                    <img src="/images/hp4.png" alt="HappyMeal Image 3">
+                </div>
+                <button class="carousel-button next">▶</button>
+            </div>
+        </div>
+        
+        <div class="project">
+            <h3>Matcha Thé</h3>
+            <p>Une boutique en ligne spécialisée dans les thés de haute qualité.
+                
+            </p>
+            <div class="carousel">
+                <button class="carousel-button prev">◀</button>
+                <div class="carousel-images">
+                    <img src="/images/THE.png" alt="Matcha Thé Image 1">
+                    <img src="/images/THE3.png" alt="Matcha Thé Image 2">
+                    <img src="/images/THE2.png" alt="Matcha Thé Image 3">
+                    <img src="/images/THE4.png" alt="Matcha Thé Image 3">
+                </div>
+                <button class="carousel-button next">▶</button>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <footer>
+        <p>&copy; 2024 Mon Portfolio. Asmaa Dreissia</p>
+    </footer>
+    <script src="carousel.js"> </script>
+</body>
+</html>
