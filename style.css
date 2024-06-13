@@ -4,17 +4,52 @@ body {
     padding: 0;
     line-height: 1.6;
     font-family: Lato;
-    background-color: #bbbbe3;
+    background-color: #131352;
+ 
     
 }
+.introduction {
+    font-size: 24px; /* Augmente la taille de la police */
+    font-weight: bold; /* Rend le texte en gras */
+    color: #ffffff; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Ajoute du padding autour du texte */
+    background: #191c4f; /* Ajoute un fond léger */
+    border-radius: 7px; /* Ajoute des bordures arrondies */
+    box-shadow: 5px 8px 8px rgb(167, 169, 177);
+    margin: 20px auto; /* Centre le conteneur et ajoute une marge */
+    width: 80%; /* Ajuste la largeur du conteneur */
+    border: 2px solid white;
+    animation: neon-border-red 1.5s infinite alternate;
+}
+
+@keyframes neon-border-red {
+    0% {
+         box-shadow: 0 0 10px #8888a3, 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3;
+    }
+    25% {
+        box-shadow: 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3, 0 0 50px #8888a3;
+    }
+    50% {
+        box-shadow: 0 0 10px #8888a3, 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3;
+    }
+    75% {
+        box-shadow: 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3, 0 0 50px #8888a3;
+    }
+    100% {
+        box-shadow: 0 0 30px #8888a3, 0 0 40px #8888a3, 0 0 50px #8888a3, 0 0 60px #8888a3;
+    }
+}
+
+
 
 #welcome {
     color: #fff;
     text-align: center;
     padding: 100px; /* Ajustez la hauteur du padding selon vos besoins */
     background: linear-gradient(to bottom, #89a1a0, #d6cdc6); /* Dégradé du haut vers le bas */
-    background-image: url(/images/fond.avif);
-    background-size: cover;
+    background-image: url(/images/bleul.jpg);
+    background-size: 50%;
 }
 
 #welcome h1 {
@@ -91,9 +126,33 @@ header h1 {
 }
 
 .project h3 {
-    margin-top: 0;
-    text-align: center; /* Centre le titre */
+    position: relative;
+    font-size: 36px; /* Ajuste la taille du texte */
+    text-align: center; /* Centre le texte */
+    color: #ffffff; /* Couleur du texte */
+    margin: 20px 0; /* Ajoute une marge autour du titre */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre au texte */
 }
+
+.project h3::before,
+.project h3::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Aligne verticalement au centre */
+    width: 40%; /* Ajuste la longueur de la ligne */
+    height: 1px; /* Hauteur de la ligne */
+    background-color: #ffffff; /* Couleur de la ligne */
+}
+
+.project h3::before {
+    left: 0;
+}
+
+.project h3::after {
+    right: 0;
+}
+  
+
 
 /*FOOTER */
 footer {
@@ -195,13 +254,16 @@ p, h3{
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* Styles pour les écrans moyens et plus petits */
-@media only screen and (max-width: 768px) {
-    header nav ul {
-        justify-content: center;
-    }
+.centered-image {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    list-style: none; /* Enlève les puces de la liste */
+    padding: 0;
+    margin-top: 40px;
+}
 
-    header nav ul li {
-        margin-right: 15px;
-    }
+.centered-image img {
+    max-width: 100%; /* Ajuste la largeur de l'image pour qu'elle ne dépasse pas la largeur du conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 15px; /* Ajoute des bordures arrondies */
 }
