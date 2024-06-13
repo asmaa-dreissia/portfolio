@@ -4,14 +4,28 @@ body {
     padding: 0;
     line-height: 1.6;
     font-family: Lato;
-    background-image: url(/images/fd.avif);
-    background-size: cover; /* Pour que l'image de fond couvre tout l'arrière-plan */
-    background-position: center; /* Pour centrer l'image de fond */
-    background-repeat: no-repeat; /* Pour éviter la répétition de l'image de fond */
+    background-color: #bbbbe3;
+    
+}
+
+#welcome {
+    color: #fff;
+    text-align: center;
+    padding: 100px; /* Ajustez la hauteur du padding selon vos besoins */
+    background: linear-gradient(to bottom, #89a1a0, #d6cdc6); /* Dégradé du haut vers le bas */
+    background-image: url(/images/fond.avif);
+    background-size: cover;
+}
+
+#welcome h1 {
+    margin: 0;
+    font-size: 50px; /* Ajustez la taille de la police selon vos besoins */
+    font-family: 'Lato', sans-serif; /* Utilisation de la police Lato */
+    font-style: italic;
 }
 
 header {
-    background: #82490f;
+    background: #131352;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -51,7 +65,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #816424;
+    background-color: #465db3;
     border-radius: 5px;
 }
 
@@ -64,29 +78,26 @@ header h1 {
 /*PROJET */
 #projects {
     margin: 20px 0;
-    overflow-x: auto; /* Pour permettre le défilement horizontal si nécessaire */
-    white-space: nowrap; /* Empêche le retour à la ligne des éléments enfants */
+    padding: 0 20px; /* Ajoute une marge sur les côtés */
 }
 
 .project {
-    background: #e4e4e4;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block; /* Pour que les projets restent sur une seule ligne */
-    width: 30%; /* Ajustez la largeur de chaque projet selon vos besoins */
-    max-width: calc(33.33% - 20px); /* Ajustez la largeur maximale en fonction de la marge */
-    min-width: 200px; /* Largeur minimale pour éviter que les projets ne deviennent trop petits */
-    white-space: normal; /* Permet le retour à la ligne dans les éléments enfants si nécessaire */
+    padding: 20px;
+    margin: 20px 0; /* Marge entre les projets */
+    border-radius: 8px;
+    text-align: center;
+    width: 100%; /* Assure que chaque projet occupe toute la largeur disponible */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 .project h3 {
     margin-top: 0;
-    text-align: center; /* Centrer le titre */
+    text-align: center; /* Centre le titre */
 }
 
 /*FOOTER */
 footer {
-    background: #82490f;    
+    background-color: #131352;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -94,10 +105,21 @@ footer {
     bottom: 0;
 }
 
+h2 {
+    text-align: center;
+    color: white; /* Couleur du texte */
+    font-size: 36px; /* Taille de la police */
+    font-weight: bold; /* Poids de la police */
+    text-shadow: 0px 2px 8px #89a1a0; /* Ombre portée */
+ }
+  
+
+p, h3{
+    color: white;
+}
 /*ABOUT */
 #about {
     padding: 20px;
-    
 }
 
 .about-content {
@@ -106,7 +128,6 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 
 .about-text {
     flex: 1;
@@ -132,23 +153,8 @@ footer {
     margin-left: 20px; /* Adjust the spacing between image and text */
 }
 
-
 /*carousel */
-.project {
-    background: #fee1cd;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.project h3 {
-    margin-top: 0;
-}
-
-
-
-.carousel {
+.project .carousel {
     position: relative;
     max-width: 500px;
     margin: 20px auto;
@@ -156,17 +162,17 @@ footer {
     border-radius: 8px;
 }
 
-.carousel-images {
+.project .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-images img {
+.project .carousel-images img {
     width: 100%;
     border-radius: 8px;
 }
 
-.carousel-button {
+.project .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -177,15 +183,25 @@ footer {
     cursor: pointer;
 }
 
-.carousel-button.prev {
+.project .carousel-button.prev {
     left: 10px;
 }
 
-.carousel-button.next {
+.project .carousel-button.next {
     right: 10px;
 }
 
-.carousel-button:hover {
+.project .carousel-button:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
+/* Styles pour les écrans moyens et plus petits */
+@media only screen and (max-width: 768px) {
+    header nav ul {
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin-right: 15px;
+    }
+}
