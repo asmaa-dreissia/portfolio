@@ -1,269 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-family: Lato;
-    background-color: #131352;
- 
-    
-}
-.introduction {
-    font-size: 24px; /* Augmente la taille de la police */
-    font-weight: bold; /* Rend le texte en gras */
-    color: #ffffff; /* Couleur du texte */
-    text-align: center; /* Centre le texte */
-    padding: 20px; /* Ajoute du padding autour du texte */
-    background: #191c4f; /* Ajoute un fond léger */
-    border-radius: 7px; /* Ajoute des bordures arrondies */
-    box-shadow: 5px 8px 8px rgb(167, 169, 177);
-    margin: 20px auto; /* Centre le conteneur et ajoute une marge */
-    width: 80%; /* Ajuste la largeur du conteneur */
-    border: 2px solid white;
-    animation: neon-border-red 1.5s infinite alternate;
+    font-family: 'Lato';
+    background-color: #e1d7d7;
+    color: #333;
+
 }
 
-@keyframes neon-border-red {
-    0% {
-         box-shadow: 0 0 10px #8888a3, 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3;
-    }
-    25% {
-        box-shadow: 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3, 0 0 50px #8888a3;
-    }
-    50% {
-        box-shadow: 0 0 10px #8888a3, 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3;
-    }
-    75% {
-        box-shadow: 0 0 20px #8888a3, 0 0 30px #8888a3, 0 0 40px #8888a3, 0 0 50px #8888a3;
-    }
-    100% {
-        box-shadow: 0 0 30px #8888a3, 0 0 40px #8888a3, 0 0 50px #8888a3, 0 0 60px #8888a3;
-    }
-}
-
-
-
-#welcome {
-    color: #fff;
+.header {
+    background-image: url('./assets/images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px; /* Ajustez la hauteur du padding selon vos besoins */
-    background: linear-gradient(to bottom, #89a1a0, #d6cdc6); /* Dégradé du haut vers le bas */
-    background-image: url(/images/bleul.jpg);
-    background-size: 50%;
+    margin-bottom: 0; /* Ajouté pour enlever la marge inférieure */
 }
 
-#welcome h1 {
-    margin: 0;
-    font-size: 50px; /* Ajustez la taille de la police selon vos besoins */
-    font-family: 'Lato', sans-serif; /* Utilisation de la police Lato */
-    font-style: italic;
-}
-
-header {
-    background: #131352;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.welcome-section {
+    position: relative;
+    text-align: center;
+    color: white;
     width: 100%;
+    margin-top: 0; /* Ajouté pour enlever la marge supérieure */
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
+.welcome-section img {
+    width: 100%;
+    height: auto;
 }
 
-header nav ul li {
-    margin-right: 25px;
+.welcome-text {
+    position: absolute;
+    top: 54%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    color: rgb(84, 79, 79);
+    text-shadow: 3px 3px 6px #f0e5aa;
 }
 
-header nav ul li:last-child {
-    margin-right: 0;
+.portfolio {
+    padding: 60px 0;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
-}
-
-header nav ul li a:hover {
-    background-color: #465db3;
-    border-radius: 5px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    padding: 0 20px;
-}
-
-/*PROJET */
-#projects {
-    margin: 20px 0;
-    padding: 0 20px; /* Ajoute une marge sur les côtés */
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .project {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
     padding: 20px;
-    margin: 20px 0; /* Marge entre les projets */
-    border-radius: 8px;
-    text-align: center;
-    width: 100%; /* Assure que chaque projet occupe toute la largeur disponible */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    transition: transform 0.2s;
 }
 
 .project h3 {
-    position: relative;
-    font-size: 36px; /* Ajuste la taille du texte */
-    text-align: center; /* Centre le texte */
-    color: #ffffff; /* Couleur du texte */
-    margin: 20px 0; /* Ajoute une marge autour du titre */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre au texte */
-}
-
-.project h3::before,
-.project h3::after {
-    content: '';
-    position: absolute;
-    top: 50%; /* Aligne verticalement au centre */
-    width: 40%; /* Ajuste la longueur de la ligne */
-    height: 1px; /* Hauteur de la ligne */
-    background-color: #ffffff; /* Couleur de la ligne */
-}
-
-.project h3::before {
-    left: 0;
-}
-
-.project h3::after {
-    right: 0;
-}
-  
-
-
-/*FOOTER */
-footer {
-    background-color: #131352;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-}
-
-h2 {
-    text-align: center;
-    color: white; /* Couleur du texte */
-    font-size: 36px; /* Taille de la police */
-    font-weight: bold; /* Poids de la police */
-    text-shadow: 0px 2px 8px #89a1a0; /* Ombre portée */
- }
-  
-
-p, h3{
-    color: white;
-}
-/*ABOUT */
-#about {
-    padding: 20px;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    flex: 1;
-    padding-right: 20px; /* Adjust the spacing between text and image */
-}
-
-.about-text p {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.about-text ul {
-    list-style-type: none;
-    padding: 0;
+.project:hover {
+    transform: scale(1.05);
 }
 
-.about-text li {
-    margin-bottom: 5px;
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
 }
 
-.profile-pic {
-    max-width: 200px; /* Adjust the size of the profile picture */
-    border-radius: 10%;
-    margin-left: 20px; /* Adjust the spacing between image and text */
-}
-
-/*carousel */
-.project .carousel {
-    position: relative;
-    max-width: 500px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.project .carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.project .carousel-images img {
+.carousel-inner img {
     width: 100%;
-    border-radius: 8px;
+    height: 400px; /* Ajusté pour augmenter la hauteur des images du carrousel */
 }
 
-.project .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+h3{
+    text-shadow: 3px 3px 4px rgb(206, 187, 174);
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-.project .carousel-button.prev {
-    left: 10px;
+p{
+    font-style: italic;
 }
 
-.project .carousel-button.next {
-    right: 10px;
-}
-
-.project .carousel-button:hover {
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.centered-image {
-    display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    list-style: none; /* Enlève les puces de la liste */
-    padding: 0;
-    margin-top: 40px;
-}
-
-.centered-image img {
-    max-width: 100%; /* Ajuste la largeur de l'image pour qu'elle ne dépasse pas la largeur du conteneur */
-    height: auto; /* Conserve les proportions de l'image */
-    border-radius: 15px; /* Ajoute des bordures arrondies */
+hr {
+    background-color: black;
 }
